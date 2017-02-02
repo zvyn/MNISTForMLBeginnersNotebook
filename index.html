@@ -31,7 +31,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 </script>
 
 <!--[if lt IE 9]>
-<script src=" https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/lib/js/html5shiv.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -11847,7 +11847,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -11858,23 +11858,6 @@ a.anchor-link {
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Extracting MNIST_data/train-images-idx3-ubyte.gz
-Extracting MNIST_data/train-labels-idx1-ubyte.gz
-Extracting MNIST_data/t10k-images-idx3-ubyte.gz
-Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -11916,7 +11899,7 @@ Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">784</span><span class="p">])</span>
@@ -11941,7 +11924,7 @@ Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">784</span><span class="p">,</span> <span class="mi">10</span><span class="p">]))</span>  <span class="c1"># One weights per arrow</span>
@@ -11954,10 +11937,23 @@ Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">10</span><span class="p">]))</span>  <span class="c1"># One bias per neuron</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">exp</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
 
 </div>
@@ -11973,19 +11969,6 @@ Extracting MNIST_data/t10k-labels-idx1-ubyte.gz
 $$\text{exp} = (\color{green}{W} * \color{purple}{x}) + \color{blue}{b}$$
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">exp</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -12009,7 +11992,7 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
@@ -12046,7 +12029,7 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>  <span class="c1"># y&#39;, expected result</span>
@@ -12072,7 +12055,7 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_step</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
@@ -12092,10 +12075,10 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 <h2 id="Running-what-we-designed">Running what we designed<a class="anchor-link" href="#Running-what-we-designed">&#182;</a></h2>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
@@ -12107,10 +12090,10 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 </div>
 
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>  <span class="c1"># Randomly pick 1000 batches of 100 images</span>
@@ -12122,10 +12105,10 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">correct_prediction</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y_</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
@@ -12137,21 +12120,7 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0.9238
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12160,36 +12129,7 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 <h2 id="Using-the-neural-network">Using the neural network<a class="anchor-link" href="#Using-the-neural-network">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span>
-
-<span class="k">def</span> <span class="nf">judge_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">pixels</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="n">pixels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-                <span class="k">break</span>
-
-    <span class="n">result</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">asfarray</span><span class="p">([</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">pixel</span> <span class="o">/</span> <span class="mi">255</span><span class="p">)</span> <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">pixels</span><span class="p">])]})</span>
-
-    <span class="n">d</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="n">comp</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">, </span><span class="si">{:.4}</span><span class="s2">%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-</pre></div>
-
 </div>
-</div>
-</div>
-
-</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12202,7 +12142,7 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">judge_file</span><span class="p">(</span><span class="s1">&#39;single_files/Untitled.data&#39;</span><span class="p">)</span>
@@ -12212,26 +12152,10 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(5, 0.77275521)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="n">judge_file</span><span class="p">(</span><span class="s1">&#39;single_files/test</span><span class="si">{}</span><span class="s1">.data&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]))</span>
@@ -12242,177 +12166,18 @@ $$\text{softmax}(x)_i = \frac{\exp(x_i)}{\sum_j \exp(x_j)}$$
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>single_files/test0.data: 0, 99.62%
-single_files/test2.data: 2, 99.85%
-single_files/test3.data: 3, 100.0%
-single_files/test4.data: 4, 98.26%
-single_files/test5.data: 5, 56.41%
-</pre>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[55]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{0: (0, 0.99620062),
- 1: (8, 0.82063448),
- 2: (2, 0.99849594),
- 3: (3, 0.9999938),
- 4: (4, 0.98257762),
- 5: (5, 0.56411982),
- 6: (5, 0.98133701),
- 7: (3, 0.73685992),
- 8: (3, 0.96665359),
- 9: (3, 0.55734211)}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="k">def</span> <span class="nf">plot_counts</span><span class="p">():</span>
-    <span class="n">counts</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-        <span class="n">counts</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">values</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plot_counts</span><span class="p">()</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Fork-me!">Fork me!<a class="anchor-link" href="#Fork-me!">&#182;</a></h1><p>At <a href="https://github.com/zvyn/MNISTForMLBeginnersNotebook">https://github.com/zvyn/MNISTForMLBeginnersNotebook</a> (this version is in the milan/pizzatalk branch).
+Serve the slides from</p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-</aside></section></section>
+</div></section></section>
 </div>
 </div>
 
